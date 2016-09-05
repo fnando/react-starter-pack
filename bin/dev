@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+webpack-dev-server --no-info --config ./webpack/webpack.config.js
