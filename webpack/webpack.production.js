@@ -5,12 +5,12 @@ const extractText = require("extract-text-webpack-plugin");
 const html = require("html-webpack-plugin");
 
 module.exports = {
-  devtool: "#source-map",
+  devtool: "source-map",
   bail: true,
   debug: false,
 
   output: {
-    path: "./dist/",
+    path: "dist/",
     filename: "bundle-[hash].js",
     publicPath: "/"
   },
@@ -34,7 +34,7 @@ module.exports = {
 
       {
         test: /\.scss$/,
-        loader: extractText.extract("style-loader", "css!postcss!resolve-url!sass?outputStyle=compressed")
+        loader: extractText.extract("style", "css!postcss!resolve-url!sass?outputStyle=compressed")
       },
 
       {

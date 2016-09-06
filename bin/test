@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 set -e
-NODE_ENV=test mocha-webpack --reporter dot --webpack-config webpack/webpack.config.js "test/**/*.test.*" $@
-eslint app test
+NODE_ENV=test node_modules/.bin/mocha-webpack --reporter dot --webpack-config webpack/webpack.config.js "test/**/*.test.*" $@
+node_modules/.bin/eslint app test

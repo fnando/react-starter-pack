@@ -4,9 +4,9 @@ const html = require("html-webpack-plugin");
 
 module.exports = {
   output: {
-    path: "./dist/",
+    path: "dist/",
     filename: "bundle.js",
-    publicPath: "/dist/"
+    publicPath: "/"
   },
 
   devServer: {
@@ -21,7 +21,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
-    new html({template: "./app/templates/index.ejs", favicon: "app/images/favicon.png"})
+    new html({template: "app/templates/index.ejs", favicon: "app/images/favicon.png"})
   ],
 
   module: {
