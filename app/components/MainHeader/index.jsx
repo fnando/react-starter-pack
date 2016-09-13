@@ -1,4 +1,4 @@
-import React, { PropTypes } from "react";
+import React, {PropTypes} from "react";
 import "./style.scss";
 import src from "./images/main-header.png";
 
@@ -8,9 +8,11 @@ export default class MainHeader extends React.Component {
   };
 
   render() {
-    return <header className="MainHeader">
-              <h1>{this.props.title}</h1>
-              <img src={src} />
-            </header>;
+    return (
+      <header className="MainHeader">
+        <h1>{this.props.title}</h1>
+        <img src={src} />
+      </header>
+    );
   }
 }

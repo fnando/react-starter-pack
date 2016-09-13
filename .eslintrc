@@ -1,9 +1,13 @@
 {
   "root": true,
-  "plugins": ["react"],
+  "parser": "babel-eslint",
+  "plugins": ["babel", "react"],
   "parserOptions": {
     "sourceType": "module"
   },
+  "extends": [
+    "plugin:react/recommended"
+  ],
   "env": {
     "browser": true
   },
@@ -62,10 +66,18 @@
     "no-void": 2,
     "object-curly-spacing": [2, "never"],
     "one-var": [2, "never"],
-    "quote-props": [2, "as-needed"],
-    "quotes": [2, "double", "avoid-escape"],
     "prefer-rest-params": 2,
     "prefer-spread": 2,
+    "quote-props": [2, "as-needed"],
+    "quotes": [2, "double", "avoid-escape"],
+    "react/jsx-handler-names": 2,
+    "react/jsx-key": 2,
+    "react/jsx-space-before-closing": 2,
+    "react/jsx-uses-react": 1,
+    "react/no-direct-mutation-state": 2,
+    "react/sort-comp": 2,
+    "react/sort-prop-types": 2,
+    "react/jsx-wrap-multilines": 2,
     "semi": [2, "always"],
     "space-before-function-paren": [2, "never"],
     "space-in-parens": [2, "never"],
