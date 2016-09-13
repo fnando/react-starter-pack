@@ -4,7 +4,7 @@ import src from "./images/main-header.png";
 
 export default class MainHeader extends React.Component {
   static propTypes = {
-    title: PropTypes.string.isRequired
+    title: PropTypes.string.isRequired,
   };
 
   render() {
