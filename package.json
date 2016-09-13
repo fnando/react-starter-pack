@@ -1,5 +1,6 @@
 {
   "name": "react-starter-pack",
+  "repository": "https://github.com/fnando/react-starter-pack",
   "version": "1.0.0",
   "scripts": {
     "test": "./bin/test",
