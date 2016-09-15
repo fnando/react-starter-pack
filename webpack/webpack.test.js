@@ -3,6 +3,10 @@ const nodeExternals = require("webpack-node-externals");
 module.exports = {
   target: "node",
   externals: [nodeExternals()],
+  resolve: {
+    modulesDirectories: [process.cwd(), "node_modules"],
+    extensions: ["", ".js", ".jsx"]
+  },
 
   module: {
     loaders: [

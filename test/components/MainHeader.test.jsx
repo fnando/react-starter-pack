@@ -3,7 +3,7 @@ import {expect} from "chai";
 import {shallow} from "enzyme";
 import React from "react";
 
-import MainHeader from "../../app/components/MainHeader";
+import MainHeader from "app/components/MainHeader";
 
 describe("MainHeader", () => {
   it("renders title", () => {
