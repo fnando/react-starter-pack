@@ -2,3 +2,4 @@
 set -e
 NODE_ENV=test node_modules/.bin/mocha-webpack --reporter dot --webpack-config webpack/webpack.config.js "test/**/*.test.*" $@
 ./bin/js-lint
+node_modules/.bin/nsp check

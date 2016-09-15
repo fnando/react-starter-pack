@@ -3,10 +3,10 @@
   "repository": "https://github.com/fnando/react-starter-pack",
   "version": "1.0.0",
   "scripts": {
-    "test": "./bin/test",
-    "test:watch": "./bin/test --watch",
     "dev": "./bin/dev",
-    "dist": "./bin/dist"
+    "dist": "./bin/dist",
+    "test": "./bin/test",
+    "test:watch": "./bin/test --watch"
   },
   "author": "Nando Vieira",
   "license": "MIT",
@@ -30,6 +30,7 @@
     "mocha": "^3.0.2",
     "mocha-webpack": "^0.6.0",
     "node-sass": "^3.9.3",
+    "nsp": "^2.6.1",
     "null-loader": "^0.1.1",
     "postcss-loader": "^0.13.0",
     "react": "^15.3.1",
