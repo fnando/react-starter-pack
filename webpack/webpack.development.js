@@ -13,7 +13,8 @@ module.exports = {
   devServer: {
     hot: true,
     inline: true,
-    port: 3333
+    port: 3333,
+    historyApiFallback: true
   },
 
   debug: true,
