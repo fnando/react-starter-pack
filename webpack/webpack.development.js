@@ -1,3 +1,4 @@
+/* eslint-env node */
 const webpack = require("webpack");
 const autoprefixer = require("autoprefixer");
 const html = require("html-webpack-plugin");

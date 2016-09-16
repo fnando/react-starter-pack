@@ -1,3 +1,4 @@
+/* eslint-env node */
 const nodeExternals = require("webpack-node-externals");
 
 module.exports = {

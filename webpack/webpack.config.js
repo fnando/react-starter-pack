@@ -1,3 +1,5 @@
+/* eslint-env node */
+/* eslint-disable no-console */
 process.env.NODE_ENV = process.env.NODE_ENV || "development";
 const config = require(`./webpack.${process.env.NODE_ENV}.js`);
 
