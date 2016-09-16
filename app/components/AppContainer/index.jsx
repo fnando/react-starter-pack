@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.scss";
-import MainHeader from "../MainHeader";
-import src from "../../images/wr.png";
+import MainHeader from "app/components/MainHeader";
+import src from "app/images/wr.png";
 
 export default class AppContainer extends React.Component {
   render() {

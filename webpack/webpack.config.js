@@ -8,5 +8,8 @@ console.log(`=> Running webpack for ${process.env.NODE_ENV}.\n`);
 module.exports = Object.assign({}, {
   target: "web",
   entry: "./app/main.jsx",
-  resolve: {extensions: ["", ".js", ".jsx"]}
+  resolve: {
+    modulesDirectories: [process.cwd(), "node_modules"],
+    extensions: ["", ".js", ".jsx"]
+  },
 }, config);
