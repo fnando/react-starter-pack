@@ -78,7 +78,6 @@
     "react/jsx-handler-names": 2,
     "react/jsx-indent": [2, 2],
     "react/jsx-key": 2,
-    "react/jsx-no-bind": 2,
     "react/jsx-no-duplicate-props": [1, {"ignoreCase": true}],
     "react/jsx-pascal-case": 2,
     "react/jsx-space-before-closing": 2,

@@ -30,7 +30,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: "babel!eslint"
+        loader: "babel!eslint?configFile=.eslintrc.development"
       },
 
       {
