@@ -2,8 +2,9 @@
 const webpack = require("webpack");
 const autoprefixer = require("autoprefixer");
 const html = require("html-webpack-plugin");
+const config = require("./webpack.config");
 
-module.exports = {
+module.exports = Object.assign({}, config, {
   output: {
     path: "dist/",
     filename: "bundle.js",
@@ -21,6 +22,11 @@ module.exports = {
   devtool: "eval-source-map",
 
   plugins: [
+    new webpack.DefinePlugin({
+      "process.env": {
+        NODE_ENV: JSON.stringify("development")
+      }
+    }),
     new webpack.HotModuleReplacementPlugin(),
     new html({template: "app/templates/index.ejs", favicon: "app/images/favicon.png"})
   ],
@@ -48,4 +54,4 @@ module.exports = {
   postcss: [
     autoprefixer({browsers: ["last 2 versions"]})
   ]
-};
+});

@@ -1,13 +1,24 @@
 /* eslint-env node */
+const webpack = require("webpack");
+const config = require("./webpack.config");
 const nodeExternals = require("webpack-node-externals");
 
-module.exports = {
+module.exports = Object.assign({}, config, {
   target: "node",
   externals: [nodeExternals()],
+
   resolve: {
     modulesDirectories: ["app", process.cwd(), "node_modules"],
     extensions: ["", ".js", ".jsx"]
   },
+
+  plugins: [
+    new webpack.DefinePlugin({
+      "process.env": {
+        NODE_ENV: JSON.stringify("test")
+      }
+    })
+  ],
 
   module: {
     loaders: [
@@ -28,4 +39,4 @@ module.exports = {
       }
     ]
   }
-};
+});

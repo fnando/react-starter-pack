@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 set -e
-NODE_ENV=test node_modules/.bin/mocha-webpack --reporter dot --webpack-config webpack/webpack.config.js "test/**/*.test.*" $@
+NODE_ENV=test node_modules/.bin/mocha-webpack --reporter dot --webpack-config webpack/webpack.test.js "test/**/*.test.*" $@
 ./bin/js-lint
 node_modules/.bin/nsp check

@@ -1,11 +1,13 @@
 /* eslint-env node */
-const webpack = require("webpack");
 const autoprefixer = require("autoprefixer");
-const manifest = require("webpack-assets-manifest");
+const clean = require("clean-webpack-plugin");
+const config = require("./webpack.config");
 const extractText = require("extract-text-webpack-plugin");
 const html = require("html-webpack-plugin");
+const manifest = require("webpack-assets-manifest");
+const webpack = require("webpack");
 
-module.exports = {
+module.exports = Object.assign({}, config, {
   devtool: "source-map",
   bail: true,
   debug: false,
@@ -17,6 +19,12 @@ module.exports = {
   },
 
   plugins: [
+    new clean(["dist"]),
+    new webpack.DefinePlugin({
+      "process.env": {
+        NODE_ENV: JSON.stringify("production")
+      }
+    }),
     new webpack.optimize.OccurenceOrderPlugin(true),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({output: {comments: false}}),
@@ -48,4 +56,4 @@ module.exports = {
   postcss: [
     autoprefixer({browsers: ["last 2 versions"]})
   ]
-};
+});
