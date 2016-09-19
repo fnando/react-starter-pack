@@ -7,11 +7,6 @@ module.exports = Object.assign({}, config, {
   target: "node",
   externals: [nodeExternals()],
 
-  resolve: {
-    modulesDirectories: ["app", process.cwd(), "node_modules"],
-    extensions: ["", ".js", ".jsx"]
-  },
-
   plugins: [
     new webpack.DefinePlugin({
       "process.env": {
