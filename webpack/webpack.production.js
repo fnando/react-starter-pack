@@ -25,7 +25,7 @@ module.exports = Object.assign({}, config, {
         NODE_ENV: JSON.stringify("production")
       }
     }),
-    new webpack.optimize.OccurenceOrderPlugin(true),
+    new webpack.optimize.OccurrenceOrderPlugin(true),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({output: {comments: false}}),
     new extractText("bundle-[hash].css", {allChunks: true}),
